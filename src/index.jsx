@@ -14,6 +14,7 @@ import channelsReducer from './reducers/channels_reducer';
 import selectedChannelReducer from './reducers/selected_channel_reducer';
 import messagesReducer from './reducers/messages_reducer';
 import usernameReducer from './reducers/username_reducer';
+import createMessageReducer from './reducers/create_message_reducer';
 
 // State and reducers
 const initialState = {
@@ -21,14 +22,13 @@ const initialState = {
   selectedChanel: 'general',
   messages: [],
   // username: prompt("What is your username?") || `anonymous${Math.floor(10 + (Math.random() * 90))}`
-
 }
 
 const reducers = combineReducers({
   channels: channelsReducer,
   selectedChannel: selectedChannelReducer,
   messages: messagesReducer,
-  username: usernameReducer,
+  username: usernameReducer
 });
 
 // render an instance of the component in the DOM

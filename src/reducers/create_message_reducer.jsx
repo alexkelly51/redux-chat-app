@@ -1,10 +1,12 @@
 export default function(state,action) {
   if (state === undefined) {
-    return [ 'general', 'react', 'paris' ]
+    return null
   }
     switch (action.type) {
-    case 'SET_CHANNELS': {
-      return action.payload;
+    case 'CREATE_MESSAGE': {
+      const newMessages = state.slice(0)
+      newMessages.push(action.payload);
+      return newMessages;
     }
     default: {
       return state

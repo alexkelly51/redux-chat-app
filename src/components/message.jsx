@@ -8,7 +8,7 @@ class Message extends Component {
 
   render () {
     return (
-      <div key={this.props.message.created_at} >
+      <div key={this.props.message.id} >
         <div className='message'>
           <h2>{this.props.message.content}</h2>
           <p>{this.props.message.author}</p>
